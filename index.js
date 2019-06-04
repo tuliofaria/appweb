@@ -5,7 +5,9 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-    res.send('running version', VERSION)
+    res.send({
+        out: 'running version' + VERSION
+    })
 })
 
 app.listen(port, err => {
